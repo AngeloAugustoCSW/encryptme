@@ -1,10 +1,10 @@
 // =============================================================
 // Use this if you want a "quick" read: 
 // CTRL + F then [<type of operation>]
-// [WIP] Insert not implemented
+// [TST] Insert implemented, need testing
 // [WIP] Update not implemented
 // [TST] Select implemented, need testing
-// [WIP] Delete not implemented
+// [TST] Delete implemented, need testing
 // =============================================================
 // System libs.
 using System;
@@ -55,6 +55,12 @@ namespace Controllers
         }
         // =====================================================
         // [DELETE] password
+         public static Senha DeletePass(int Id)
+        {
+            Senha senhas = Models.Senha.GetSenha(Id);
+            Senha.RemoverSenha(senhas);
+            return senhas;
+        }
         // =====================================================
     }
 }
