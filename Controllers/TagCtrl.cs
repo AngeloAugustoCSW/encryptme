@@ -2,7 +2,7 @@
 // Use this if you want a "quick" read: 
 // CTRL + F then [<type of operation>]
 // [TST] Insert implemented, need testing
-// [WIP] Update not implemented, 
+// [TST] Update implemented, need testing
 // [WIP] Select not implemented, 
 // [WIP] Delete not implemented, 
 // =============================================================
@@ -33,7 +33,18 @@ namespace Controllers
         }
         // =====================================================
         // [UPDATE] existing tag
-        
+        public static void UpdateTag(
+            int Id,
+            string Descricao
+        )
+        {
+            Tag tag = Models.Tag.GetTag(Id);
+            if (!String.IsNullOrEmpty(Descricao))
+            {
+                tag.Descricao = Descricao;
+            }
+            Tag.AlterarTag(Id, Descricao);
+        }
         // =====================================================
         // [SELECT] tag
         // ======================
