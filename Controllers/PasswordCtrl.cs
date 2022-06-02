@@ -2,7 +2,7 @@
 // Use this if you want a "quick" read: 
 // CTRL + F then [<type of operation>]
 // [TST] Insert implemented, need testing
-// [WIP] Update not implemented
+// [TST] Update implemented, need testing
 // [TST] Select implemented, need testing
 // [TST] Delete implemented, need testing
 // =============================================================
@@ -39,6 +39,42 @@ namespace Controllers
         }
         // =====================================================
         // [UPDATE] existing password
+        public static void UpdatePass(
+            int Id,
+            string Nome,
+            int CategoriaId,
+            string Url,
+            string Usuario, 
+            string SenhaEncrypt, 
+            string Procedimento)
+        {
+            Senha senha = Models.Senha.GetSenha(Id);
+            if (!String.IsNullOrEmpty(Nome))
+            {
+                senha.Nome = Nome;
+            }
+            if (CategoriaId != 0)
+            {
+                senha.CategoriaId = CategoriaId;
+            }
+            if (!String.IsNullOrEmpty(Url))
+            {
+                senha.Url = Url;
+            }
+             if (!String.IsNullOrEmpty(Usuario))
+            {
+                senha.Usuario = Usuario;
+            }
+            if (!String.IsNullOrEmpty(SenhaEncrypt))
+            {
+                senha.SenhaEncrypt = SenhaEncrypt;
+            }
+            if (!String.IsNullOrEmpty(Procedimento))
+            {
+                senha.Procedimento = Procedimento;
+            }
+            Senha.AlterarSenha(Id,Nome,CategoriaId,Url,Usuario,SenhaEncrypt,Procedimento);
+        }
         // =====================================================
         // [SELECT] password
         // ======================
