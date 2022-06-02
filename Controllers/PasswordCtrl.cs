@@ -23,6 +23,20 @@ namespace Controllers
     {
         // =====================================================
         // [INSERT] new password
+        public static Senha InsertPass(
+            string Nome,
+            int CategoriaId,
+            string Url,
+            string Usuario, 
+            string SenhaEncrypt, 
+            string Procedimento)
+        {
+            if (String.IsNullOrEmpty(Nome))
+            {
+                throw new Exception("Nome de usuário inválido");
+            }
+            return new Senha(Nome,CategoriaId,Url,Usuario,SenhaEncrypt,Procedimento);
+        }
         // =====================================================
         // [UPDATE] existing password
         // =====================================================
