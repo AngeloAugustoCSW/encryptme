@@ -13,7 +13,6 @@ using System.Collections.Generic;
 using System.Linq;
 // =============================================================
 // Repository related files
-using Repository;
 using Models;
 // =============================================================
 // Main "CategoryController" code
