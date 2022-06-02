@@ -3,7 +3,7 @@
 // CTRL + F then [<type of operation>]
 // [TST] Insert implemented, need testing
 // [TST] Update implemented, need testing
-// [WIP] Select not implemented, 
+// [TST] Select implemented, need testing
 // [WIP] Delete not implemented, 
 // =============================================================
 // System libs.
@@ -49,10 +49,16 @@ namespace Controllers
         // [SELECT] tag
         // ======================
         // Select [ALL] tags
-        
+        public static IEnumerable<Tag> ViewTags()
+        {
+            return Models.Tag.GetTags();  
+        }
         // ======================
         // Select [SINGLE] tag
-        
+        public static Tag ViewTag(int Id)
+        {
+            return Models.Tag.GetTag(Id);
+        }
         // =====================================================
         // [DELETE] tag
         
