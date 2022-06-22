@@ -33,12 +33,15 @@ namespace Controllers
             {
                 throw new Exception("Nome obrigatório (Campo inválido ou vazio)");
             }
-
+            Regex rgx = new Regex("^[a-z0-9.]+@[a-z0-9]+\\.[a-z]+(\\.[a-z]+)?$");
+            if (String.IsNullOrEmpty(Email) || !rgx.IsMatch(Email))
+            {
+                throw new Exception("Email inválido");
+            }
             if (String.IsNullOrEmpty(Email)) 
             {
                 throw new Exception("Email obrigatório (Campo inválido ou vazio)");
             }
-            
             if (String.IsNullOrEmpty(Senha) || Senha.Length <= 8)
             {
                 throw new Exception("Senha inválida (Campo inválido ou vazio)");
@@ -65,12 +68,15 @@ namespace Controllers
             {
                 usuario.Nome = Nome;
             }
-
+            Regex rgx = new Regex("^[a-z0-9.]+@[a-z0-9]+\\.[a-z]+(\\.[a-z]+)?$");
+            if (String.IsNullOrEmpty(Email) || !rgx.IsMatch(Email))
+            {
+                throw new Exception("Email inválido");
+            }
             if (!String.IsNullOrEmpty(Email))
             {
                 usuario.Email = Email;
             }
-
             if (!String.IsNullOrEmpty(Senha))
             {
                 
