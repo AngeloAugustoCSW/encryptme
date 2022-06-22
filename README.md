@@ -71,21 +71,21 @@ Para essa aplicação serão necessárias as seguintes tarefas:
 
 - [ ] Processo de Login
 - [ ] Menu Principal
-- [ ] Lista de Categorias
+- [X] Lista de Categorias
 - [X] Lista de Tags
-- [ ] Lista de Usuários
+- [X] Lista de Usuários
 - [X] Lista de Senhas
-- [ ] Criar Categoria
-- [ ] Criar Tag
-- [ ] Criar Usuário
+- [X] Criar Categoria
+- [X] Criar Tag
+- [X] Criar Usuário
 - [X] Criar Senha
-- [ ] Alterar Categoria
-- [ ] Alterar Tag
-- [ ] Alterar Usuário
+- [X] Alterar Categoria
+- [X] Alterar Tag
+- [X] Alterar Usuário
 - [X] Alterar Senha
-- [ ] Excluir Categoria
-- [ ] Excluir Tag
-- [ ] Excluir Usuário
+- [X] Excluir Categoria
+- [X] Excluir Tag
+- [X] Excluir Usuário
 - [X] Excluir Senha
 - [ ] Criar Relação entre Senha e Tag
 - [ ] Excluir Relação entre Senha e Tag
