@@ -103,7 +103,12 @@ namespace Controllers
         
         // =====================================================
         // [DELETE] user
-        
+        public static Usuario DeleteUser(int Id)
+        {
+            Usuario usuario = Models.Usuario.GetUsuario(Id);
+            Usuario.RemoverUsuario(usuario);
+            return usuario;
+        }
         // =====================================================
     }
 }
