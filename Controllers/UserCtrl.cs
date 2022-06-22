@@ -3,7 +3,7 @@
 // CTRL + F then [<type of operation>]
 // [TST] Insert implemented, need testing
 // [TST] Update implemented, need testing
-// [WIP] Select not implemented
+// [TST] Select implemented, need testing
 // [WIP] Delete not implemented
 // =============================================================
 // System libs.
@@ -52,7 +52,7 @@ namespace Controllers
         }
         // =====================================================
         // [UPDATE] existing user
-        public static void UpdateUsuario(
+        public static void UpdateUser(
             int Id,
             string Nome,
             string Email,
@@ -94,7 +94,10 @@ namespace Controllers
         // [SELECT] user
         // ======================
         // Select [ALL] users
-        
+        public static IEnumerable<Usuario> ViewUsers()
+        {
+            return Models.Usuario.GetUsuarios();  
+        }
         // ======================
         // Select [SINGLE] user
         
