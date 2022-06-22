@@ -2,7 +2,7 @@
 // Use this if you want a "quick" read: 
 // CTRL + F then [<type of operation>]
 // [TST] Insert implemented, need testing
-// [WIP] Update not implemented
+// [TST] Update implemented, need testing
 // [WIP] Select not implemented
 // [WIP] Delete not implemented
 // =============================================================
@@ -52,7 +52,44 @@ namespace Controllers
         }
         // =====================================================
         // [UPDATE] existing user
-        
+        public static void UpdateUsuario(
+            int Id,
+            string Nome,
+            string Email,
+            string Senha
+        )
+        {
+            Usuario usuario = Models.Usuario.GetUsuario(Id);
+
+            if (!String.IsNullOrEmpty(Nome))
+            {
+                usuario.Nome = Nome;
+            }
+
+            if (!String.IsNullOrEmpty(Email))
+            {
+                usuario.Email = Email;
+            }
+
+            if (!String.IsNullOrEmpty(Senha))
+            {
+                
+                if (String.IsNullOrEmpty(Senha) || Senha.Length <= 8)
+                {
+                    throw new Exception("Senha está inválida");
+                }
+                else
+                {
+                    Senha = BCrypt.Net.BCrypt.HashPassword(Senha);
+                    usuario.Senha = Senha;
+                }
+            }
+            else
+            {
+                throw new Exception("Senha está inválida");
+            }
+            Usuario.AlterarUsuario(Id, Nome, Email, Senha);
+        }
         // =====================================================
         // [SELECT] user
         // ======================
