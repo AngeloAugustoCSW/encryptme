@@ -2,8 +2,8 @@
 // Use this if you want a "quick" read: 
 // CTRL + F then [<type of operation>]
 // [TST] Insert implemented, need testing
-// [WIP] Update not implemented
-// [WIP] Select not implemented
+// [TST] Update implemented, need testing
+// [TST] Select implemented, need testing
 // [WIP] Delete not implemented
 // =============================================================
 // System libs.
@@ -52,12 +52,52 @@ namespace Controllers
         }
         // =====================================================
         // [UPDATE] existing user
-        
+        public static void UpdateUser(
+            int Id,
+            string Nome,
+            string Email,
+            string Senha
+        )
+        {
+            Usuario usuario = Models.Usuario.GetUsuario(Id);
+
+            if (!String.IsNullOrEmpty(Nome))
+            {
+                usuario.Nome = Nome;
+            }
+
+            if (!String.IsNullOrEmpty(Email))
+            {
+                usuario.Email = Email;
+            }
+
+            if (!String.IsNullOrEmpty(Senha))
+            {
+                
+                if (String.IsNullOrEmpty(Senha) || Senha.Length <= 8)
+                {
+                    throw new Exception("Senha está inválida");
+                }
+                else
+                {
+                    Senha = BCrypt.Net.BCrypt.HashPassword(Senha);
+                    usuario.Senha = Senha;
+                }
+            }
+            else
+            {
+                throw new Exception("Senha está inválida");
+            }
+            Usuario.AlterarUsuario(Id, Nome, Email, Senha);
+        }
         // =====================================================
         // [SELECT] user
         // ======================
         // Select [ALL] users
-        
+        public static IEnumerable<Usuario> ViewUsers()
+        {
+            return Models.Usuario.GetUsuarios();  
+        }
         // ======================
         // Select [SINGLE] user
         
