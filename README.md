@@ -153,4 +153,4 @@ As aboradegens dessa seção servem de guia e não de restrição de desenvolvim
 
 Deverá ser desenvolvido a aplicação em questão e entregue através do Github. É importante que a cada novo desenvolvimento (tarefa) seja feita uma nova Branch com seu respectivo Pull Request no encerramento.
 
-Deverá ser concluído até o dia 22/06/2022 23:59 (2022-06-22T23:59:59.0300).
+Deverá ser concluído até o dia 29/06/2022 23:59 (2022-06-22T23:59:59.0300).
