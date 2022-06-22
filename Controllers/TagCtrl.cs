@@ -61,7 +61,12 @@ namespace Controllers
         }
         // =====================================================
         // [DELETE] tag
-        
+        public static Tag DeleteTag(int Id)
+        {
+            Tag tag = Models.Tag.GetTag(Id);
+            Tag.RemoverTag(tag);
+            return tag;
+        }
         // =====================================================
     }
 }
