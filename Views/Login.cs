@@ -32,7 +32,7 @@ namespace Views
          private void handleConfirm(object sender, EventArgs e)
         {
             try {
-                UsuarioController.Auth(
+                UserCtrl.Auth(
                     this.fieldUsuario.txtField.Text,
                     this.fieldSenha.txtField.Text
                 );

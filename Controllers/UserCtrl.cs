@@ -132,6 +132,16 @@ namespace Controllers
             return usuario;
         }
         // =====================================================
+        // [AUTH] user authentication
+        public static void Auth(string Email, string Senha) {
+            try {
+                Usuario.Auth(Email, Senha);
+            }
+            catch
+            {
+                throw new Exception("Email ou senha inválido");
+            }
+        }
     }
 }
 // =============================================================
