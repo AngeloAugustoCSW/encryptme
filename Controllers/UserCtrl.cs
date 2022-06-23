@@ -106,7 +106,23 @@ namespace Controllers
         }
         // ======================
         // Select [SINGLE] user
-        
+        public static Usuario ViewUser(
+            int Id
+        )
+        {
+            Usuario usuario = (
+                from Usuario in Usuario.GetUsuarios()
+                    where Usuario.Id == Id
+                    select Usuario
+            ).First();
+            
+            if (usuario == null)
+            {
+                throw new Exception("Usuario não encontrada");
+            }
+
+            return usuario;
+        }
         // =====================================================
         // [DELETE] user
         public static Usuario DeleteUser(int Id)
