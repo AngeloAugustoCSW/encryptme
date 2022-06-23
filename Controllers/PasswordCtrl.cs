@@ -19,7 +19,7 @@ using Models;
 // Main "PasswordController" code
 namespace Controllers
 {
-    public class SenhasCtrl
+    public class PassCtrl
     {
         // =====================================================
         // [INSERT] new password
