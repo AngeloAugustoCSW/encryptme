@@ -4,7 +4,7 @@
 // [TST] Insert implemented, need testing
 // [TST] Update implemented, need testing
 // [TST] Select implemented, need testing
-// [WIP] Delete not implemented
+// [TST] Delete implemented, need testing
 // =============================================================
 // System libs.
 using System;
