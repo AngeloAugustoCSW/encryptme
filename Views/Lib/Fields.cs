@@ -1,7 +1,10 @@
+// =============================================================
+// System libs.
 using System;
 using System.Windows.Forms;
 using System.Drawing;
-
+// =============================================================
+// Main "Fields" code
 namespace Views.Lib
 {
     public class FieldForm : Form
@@ -28,3 +31,4 @@ namespace Views.Lib
         }
     }
 }
+// =============================================================
