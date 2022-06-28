@@ -16,7 +16,7 @@ using Controllers;
 // Main "" code
 namespace Views
 {
-    public class InserirCategoria : BaseForm
+    public class InsertCategory : BaseForm
     {
         CatgCrud parent;
         FieldForm fieldNome;
@@ -24,7 +24,7 @@ namespace Views
 		ButtonForm btnConfirmar;
         ButtonForm btnCancelar;
 
-        public InserirCategoria(CatgCrud parent) : base("InserirCategoria",SizeScreen.Small)
+        public InsertCategory(CatgCrud parent) : base("InsertCategory",SizeScreen.Small)
         {
             this.parent = parent;
             this.parent.Hide();
