@@ -13,7 +13,7 @@ using Models;
 // Main "" code
 namespace Views
 {
-    public class AlterarSenha : BaseForm
+    public class UpdatePass : BaseForm
     {
         PassCrud parent;
         FieldForm fieldNome;
@@ -29,7 +29,7 @@ namespace Views
 		ButtonForm btnConfirmar;
         ButtonForm btnCancelar;
 
-        public AlterarSenha(PassCrud parent) : base("AlterarSenha",SizeScreen.Different)
+        public UpdatePass(PassCrud parent) : base("UpdatePass",SizeScreen.Different)
         {
             this.parent = parent;
             this.parent.Hide();
@@ -96,7 +96,7 @@ namespace Views
                 string idCategoria = destructComboBoxValue[0].Trim(); // "1 " => "1"
                 ListViewItem item = this.parent.listView.SelectedItems[0];
                 int id = Convert.ToInt32(item.Text);
-                PassCtrl.AlterarSenha(
+                PassCtrl.UpdatePass(
                     id,
                     this.fieldNome.txtField.Text,
                     Convert.ToInt32(idCategoria),
