@@ -73,7 +73,7 @@ namespace Views
         private void handleAlterar(object sender, EventArgs e)
         {
             if (listView.SelectedItems.Count > 0) {
-                (new AlterarCategoria(this)).Show();
+                (new UpdateCategory(this)).Show();
                 this.Hide();
             } else {
                 MessageBox.Show("Selecione 1 item da lista");
