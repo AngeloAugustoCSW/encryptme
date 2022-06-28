@@ -49,7 +49,7 @@ namespace Views
             this.Controls.Add(btnVoltar);
         }
         public void LoadInfo() {
-            IEnumerable<Usuario> usuarios = UserCtrl.GetUsuarios();
+            IEnumerable<Usuario> usuarios = UserCtrl.ViewUsers();
 
             this.listView.Items.Clear();
             foreach (Usuario item in usuarios)
