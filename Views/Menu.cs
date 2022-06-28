@@ -35,7 +35,7 @@ namespace Views
         }
         private void handleCategoria(object sender, EventArgs e)
         {
-            (new CategoriaCrud(this)).Show();
+            (new CatgCrud(this)).Show();
             this.Hide();
 
         }
@@ -47,13 +47,13 @@ namespace Views
         }
         private void handleSenhas(object sender, EventArgs e)
         {
-            (new SenhaCrud(this)).Show();
+            (new PassCrud(this)).Show();
             this.Hide();
 
         }
         private void handleUsuario(object sender, EventArgs e)
         {
-            (new UsuarioCrud(this)).Show();
+            (new UserCrud(this)).Show();
             this.Hide();
 
         }
