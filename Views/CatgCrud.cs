@@ -14,7 +14,7 @@ using Views.Lib;
 using Models;
 using Controllers;
 // =============================================================
-// Main "" code
+// Main "CategoryCrud" code
 namespace Views
 {
     public class CatgCrud : BaseForm

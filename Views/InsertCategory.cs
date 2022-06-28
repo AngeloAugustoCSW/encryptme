@@ -13,7 +13,7 @@ using System.Threading;
 using Views.Lib;
 using Controllers;
 // =============================================================
-// Main "" code
+// Main "InsertCategory" code
 namespace Views
 {
     public class InsertCategory : BaseForm

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 // Repository related files.
 using Views.Lib;
 // =============================================================
-// Main "" code
+// Main "MenuScreen" code
 namespace Views
 {
     public class Menu : BaseForm

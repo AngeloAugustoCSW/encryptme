@@ -13,7 +13,7 @@ using System.Threading;
 using Views.Lib;
 using Controllers;
 // =============================================================
-// Main "" code
+// Main "UpdateCategory" code
 namespace Views
 {
     public class UpdateCategory : BaseForm

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using Views.Lib;
 using Controllers;
 // =============================================================
-// Main "" code
+// Main "InsertUser" code
 namespace Views
 {
     public class InsertUser : BaseForm
