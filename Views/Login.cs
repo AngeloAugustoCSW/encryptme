@@ -1,8 +1,13 @@
+// =============================================================
+// System libs.
 using System;
 using System.Windows.Forms;
+// =============================================================
+// Repository related files.
 using Views.Lib;
 using Controllers;
-
+// =============================================================
+// Main "LoginScreen" code
 namespace Views
 {
     public class Login : BaseForm
@@ -50,3 +55,4 @@ namespace Views
         }
     }
 }
+// =============================================================

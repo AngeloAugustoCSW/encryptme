@@ -1,7 +1,10 @@
+// =============================================================
+// System libs.
 using System;
 using System.Windows.Forms;
 using System.Drawing;
-
+// =============================================================
+// Main "Buttons" code
 namespace Views.Lib
 {
     public class ButtonForm : Button
@@ -18,3 +21,4 @@ namespace Views.Lib
         }
     }
 }
+// =============================================================
