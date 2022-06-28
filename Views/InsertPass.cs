@@ -10,7 +10,7 @@ using Views.Lib;
 using Controllers;
 using Models;
 // =============================================================
-// Main "" code
+// Main "InsertPass" code
 namespace Views
 {
     public class InsertPass : BaseForm
@@ -89,9 +89,9 @@ namespace Views
         private void handleConfirm(object sender, EventArgs e)
         {
             try {
-                string comboBoxValue = this.comboBox.Text; // "1 - Nome"
-                string[] destructComboBoxValue = comboBoxValue.Split('-'); // ["1 ", " Nome"];
-                string idCategoria = destructComboBoxValue[0].Trim(); // "1 " => "1"
+                string comboBoxValue = this.comboBox.Text;
+                string[] destructComboBoxValue = comboBoxValue.Split('-');
+                string idCategoria = destructComboBoxValue[0].Trim();
                 PassCtrl.InsertPass(
                     this.fieldNome.txtField.Text,
                     Convert.ToInt32(idCategoria),
@@ -103,10 +103,7 @@ namespace Views
                 if (checkedList.SelectedItems.Count > 0) 
                 {
                     foreach (var item in checkedList.SelectedItems)
-                    {
-                        //SenhaTagCtrl.InsertPassTag(0, item.ToString());
-                    }
-                    //this.Hide();
+                    {}
                 } else {
                     MessageBox.Show("Selecione 1 Tag da lista");
                 }

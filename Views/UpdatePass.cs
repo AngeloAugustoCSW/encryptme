@@ -10,7 +10,7 @@ using Views.Lib;
 using Controllers;
 using Models;
 // =============================================================
-// Main "" code
+// Main "UpdatePass" code
 namespace Views
 {
     public class UpdatePass : BaseForm
@@ -91,9 +91,9 @@ namespace Views
         private void handleConfirm(object sender, EventArgs e)
         {
             try {
-                string comboBoxValue = this.comboBox.Text; // "1 - Nome"
-                string[] destructComboBoxValue = comboBoxValue.Split('-'); // ["1 ", " Nome"];
-                string idCategoria = destructComboBoxValue[0].Trim(); // "1 " => "1"
+                string comboBoxValue = this.comboBox.Text;
+                string[] destructComboBoxValue = comboBoxValue.Split('-');
+                string idCategoria = destructComboBoxValue[0].Trim();
                 ListViewItem item = this.parent.listView.SelectedItems[0];
                 int id = Convert.ToInt32(item.Text);
                 PassCtrl.UpdatePass(
@@ -104,15 +104,12 @@ namespace Views
                     this.fieldUsuario.txtField.Text,
                     this.fieldSenha.txtField.Text,
                     this.fieldProcedimento.txtField.Text
-                    //TAG??
                 );
                 if (checkedList.SelectedItems.Count > 0) 
                 {
                     foreach (var itemList in checkedList.SelectedItems)
                     {
-                        //SenhaTagCtrl.InserirSenhaTag(0, item.ToString());
                     }
-                    //this.Hide();
                 } else {
                     MessageBox.Show("Selecione 1 Tag da lista");
                 }
