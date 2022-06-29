@@ -17,15 +17,15 @@ namespace Views
         ButtonForm btnSenhas;
         ButtonForm btnUsuário;
         ButtonForm btnSair;
-        public Menu(Form parent) : base("Bem-Vindo", SizeScreen.Small) 
+        public Menu(Form parent) : base("Bem-Vindo", SizeScreen.Tiny) 
         {
             this.parent = parent;
             this.parent.Hide();
-            btnCategoria = new ButtonForm("Categoria", 100, 30, this.handleCategoria);
-            btnTag = new ButtonForm("Tag", 100, 80, this.handleTag);
-            btnSenhas = new ButtonForm("Senhas", 100, 130, this.handleSenhas);
-            btnUsuário = new ButtonForm("Usuário", 100, 180, this.handleUsuario);
-            btnSair = new ButtonForm("Sair", 100, 230, this.handleSair);
+            btnCategoria = new ButtonForm("Categoria", 30, 30, this.handleCategoria);
+            btnTag = new ButtonForm("Tag", 30, 80, this.handleTag);
+            btnSenhas = new ButtonForm("Senhas", 170, 30, this.handleSenhas);
+            btnUsuário = new ButtonForm("Usuário", 170, 80, this.handleUsuario);
+            btnSair = new ButtonForm("Sair", 100, 130, this.handleSair);
 
             this.Controls.Add(btnCategoria);
             this.Controls.Add(btnTag);
@@ -64,3 +64,6 @@ namespace Views
     }
 }
 // =============================================================
+
+// testando@testetime.com.br
+// testando1234
