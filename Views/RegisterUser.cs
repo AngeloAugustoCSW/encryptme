@@ -17,7 +17,7 @@ using Views.Lib;
 // Main "RegisterUser" code
 namespace Views
 {
-    public class RegisterUser : Form
+    public class RegisterUser : BaseForm
     {
         private System.ComponentModel.IContainer components = null;
         Label lblNome;
@@ -30,7 +30,7 @@ namespace Views
         
         Button btnConfirmar;
         Button btnCancelar;
-        public RegisterUser()
+        public RegisterUser() : base("Registrar", SizeScreen.Small)
         {
             this.lblNome = new Label();
             this.lblNome.Text = "Nome";
@@ -50,10 +50,8 @@ namespace Views
             this.txtSenha = new TextBox();
             this.txtSenha.Location = new Point(60, 170);
             this.txtSenha.Size = new Size(180, 20);
-            this.btnConfirmar = new ButtonField("Confirmar", 100, 200, 100, 30);
-            btnConfirmar.Click += new EventHandler(this.btnConfirmarClick);
-            this.btnCancelar = new ButtonField("Cancelar",100, 230,100, 30);
-            btnCancelar.Click += new EventHandler(this.btnCancelarClick);
+            this.btnConfirmar = new ButtonForm("Confirmar", 100, 200, this.btnConfirmarClick);
+            this.btnCancelar = new ButtonForm("Cancelar",100, 230, this.btnCancelarClick);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblSenha);
@@ -77,11 +75,10 @@ namespace Views
             try 
             {
             string message = "Usuário cadastrado com sucesso!";
-            string caption = " PARABÉNS ";
+            string caption = "SUCCESS";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result;
             UserCtrl.InsertUser(this.txtNome.Text, this.txtEmail.Text, this.txtSenha.Text);
-            // Displays the MessageBox.
             result = MessageBox.Show(message, caption, buttons);
             if (result == System.Windows.Forms.DialogResult.Yes)
            {
@@ -89,7 +86,7 @@ namespace Views
            }
             }catch(Exception){
             string message = "Dados inválidos, tente novamente";
-            string caption = "ERRO";
+            string caption = "ERROR";
             MessageBox.Show(message, caption);
             }
         }
