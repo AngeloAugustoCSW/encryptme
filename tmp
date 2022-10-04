@@ -1,0 +1,2 @@
+time="2022-10-04T20:28:38-03:00" level=error msg="{HORUSEC_CLI} Error when check if docker requirement it's ok!" error="Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?"
+time="2022-10-04T20:28:38-03:00" level=info msg="{HORUSEC_CLI} If your docker is not installed check in docs of how to install in:\n\t\thttps://docs.docker.com/get-docker\n\t"
