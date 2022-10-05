@@ -12,3 +12,4 @@ jobs:
         uses: fike/horusec-action@v0.1
         with:
           arguments: --config-file-path=horusec-config.json
+          "horusecCliDisableDocker": true
